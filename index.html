@@ -13,16 +13,20 @@
         #rounded{
             border-radius: 30%;
         }
-        body{
-            background-image:url("https://i.pinimg.com/originals/0f/ba/e2/0fbae2bd3a0bd45b0d6a25f6459d95a3.gif");
-            background-repeat:no-repeat;
-            height:900px;
-            width:1200px;
+        .body{
+            background-image: url("https://www.animatedimages.org/data/media/710/animated-dice-image-0104.gif");
+            background-repeat: no-repeat;
+            background-size: 1500px 800px;
         }
-        
+        #rannum{
+            color:white;
+        }
+        #click{
+            color:white;
+        }
     </style>
 </head>
-<body>
+<body class="body">
     <h1 id="rannum">Number in the Dice:</h1>
     <!--<abbr title="Cascading Style Sheet">css</abbr>-->
     <svg onclick="rannum()" width="400", height="400" >
@@ -38,6 +42,7 @@
     <circle id="seven" cx="170" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
     
     </svg>
+
     <h1 id="click">CLICK ON DICE</h1>
 </body>
 </html>
