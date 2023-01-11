@@ -7,42 +7,134 @@
     <title>Document</title>
     <script src="dice.js" type="text/javascript"></script>
     <style>
-        #six,#seven{
+        #six,#seven,#player22six,#player22seven,#player2six,
+        #player2seven,#fourteen,#thirteen{
             visibility: hidden;
         }
         #rounded{
             border-radius: 30%;
         }
-        .body{
-            background-image: url("https://www.animatedimages.org/data/media/710/animated-dice-image-0104.gif");
-            background-repeat: no-repeat;
-            background-size: 1500px 800px;
+        #rannum,#click{
+            color:black;
         }
-        #rannum{
-            color:white;
+        
+        .numbers{
+            display: grid;
+            grid-template-columns: 320px 400px;
         }
-        #click{
-            color:white;
+        #dice12{
+            position: relative;
+            left: 150px;
+        
+        }
+        #game{
+            display: grid;
+            grid-template-columns: 750px 750px;
+        }
+        #player1{
+            background-color: lightblue;
+        }
+        #player2{
+            background-color: skyblue;
+        }
+        #dice22{
+            position: relative;
+            left:150px;
         }
     </style>
 </head>
 <body class="body">
-    <h1 id="rannum">Number in the Dice:</h1>
-    <!--<abbr title="Cascading Style Sheet">css</abbr>-->
-    <svg onclick="rannum()" width="400", height="400" >
-        <rect x="10px"  y="10px" width="200px" height="200px" style="fill:blue;"/>
-        <circle id="1" cx="50" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
-    <circle id="2" cx="50" cy="170" r="15" stroke="black" stroke="20px" fill="white"/>
+    <div id="game">
 
-    <circle id="3" cx="110" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>
-
-    <circle id="4" cx="170" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
-    <circle id="5" cx="170" cy="170" r="15" stroke="black" stroke="10px" fill="white"/>   
-    <circle id="six" cx="50" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
-    <circle id="seven" cx="170" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
     
-    </svg>
+    <div id="player1">
+        <div class="numbers">
+            <div class="one"><h1 >Number in the Dice: <h2 id="rannum"></h2></h1></div>
+            <div class="one"><h1 >Number in the second Dice: <h2 id="rannum2"></h2></h1></div>
+        </div>
+        <!--<abbr title="Cascading Style Sheet">css</abbr>-->
+        <svg onclick="player.rannum();player.sum1()" id="dice11" width="200px", height="200px" >
+            <rect x="10px"  y="10px" width="200px" height="200px" style="fill:blue;"/>
+            <circle id="1" cx="50" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
+        <circle id="2" cx="50" cy="170" r="15" stroke="black" stroke="20px" fill="white"/>
 
-    <h1 id="click">CLICK ON DICE</h1>
+        <circle id="3" cx="110" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>
+
+        <circle id="4" cx="170" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
+        <circle id="5" cx="170" cy="170" r="15" stroke="black" stroke="10px" fill="white"/>   
+        <circle id="six" cx="50" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
+        <circle id="seven" cx="170" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
+        </svg>
+
+        <svg onclick="player.rannum2();player.sum1()" id="dice12" width="200px", height="200px" >
+            <rect x="10px"  y="10px" width="200px" height="200px" style="fill:blue;"/>
+            <circle id="8" cx="50" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
+            <circle id="9" cx="50" cy="170" r="15" stroke="black" stroke="20px" fill="white"/>
+
+            <circle id="10" cx="110" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>
+
+            <circle id="11" cx="170" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
+            <circle id="12" cx="170" cy="170" r="15" stroke="black" stroke="10px" fill="white"/>   
+            <circle id="thirteen" cx="50" cy="110" r="15" stroke="black" stroke="20px" fill="white"/> <!--1st column 2nd row -->
+            <circle id="fourteen" cx="170" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>
+        </svg>     <!--2nd row 2nd column-->
+            <!--
+            .body{
+                background-image: url("https://www.animatedimages.org/data/media/710/animated-dice-image-0104.gif");
+                background-repeat: no-repeat;
+                background-size: 1500px 800px;
+            }-->
+        <h1 id="click">CLICK ON DICE</h1>
+        <h2 id="sumplayer1">Sum Of the Numbers in the dice:</h2>
+        <button onclick="sum1()" >GET SUM</button>
+    </div>
+
+
+    <!--Player2-->
+
+    <div id="player2">
+        <div class="numbers">
+            <div class="one"><h1 >Number in the Dice:<h2 id="rannumplayer21"></h2> </h1></div>
+            <div class="one"><h1 >Number in the second Dice: <h2 id="rannumplayer22"></h2></h1></div>
+        </div>
+        <!--<abbr title="Cascading Style Sheet">css</abbr>-->
+        <svg onclick="rannumplayer21()"  width="200px", height="200px" >
+            <rect x="10px"  y="10px" width="200px" height="200px" style="fill:blue;"/>
+            <circle id="player21" cx="50" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
+        <circle id="player22" cx="50" cy="170" r="15" stroke="black" stroke="20px" fill="white"/>
+
+        <circle id="player23" cx="110" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>
+
+        <circle id="player24" cx="170" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
+        <circle id="player25" cx="170" cy="170" r="15" stroke="black" stroke="10px" fill="white"/>   
+        <circle id="player2six" cx="50" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
+        <circle id="player2seven" cx="170" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
+        </svg>
+
+        <!--SECOND DICE-->
+        <svg onclick="rannumplayer22()" id="dice22" width="200px", height="200px" >
+            <rect x="10px"  y="10px" width="200px" height="200px" style="fill:blue;"/>
+            <circle id="player221" cx="50" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
+        <circle id="player222" cx="50" cy="170" r="15" stroke="black" stroke="20px" fill="white"/>
+
+        <circle id="player223" cx="110" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>
+
+        <circle id="player224" cx="170" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
+        <circle id="player225" cx="170" cy="170" r="15" stroke="black" stroke="10px" fill="white"/>   
+        <circle id="player22six" cx="50" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
+        <circle id="player22seven" cx="170" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
+        </svg>     <!--2nd row 2nd column-->
+            <!--
+            .body{
+                background-image: url("https://www.animatedimages.org/data/media/710/animated-dice-image-0104.gif");
+                background-repeat: no-repeat;
+                background-size: 1500px 800px;
+            }-->
+        <h1 id="click">CLICK ON DICE</h1>
+        <h2 id="sumplayer2">Sum Of the Numbers in the dice:</h2>
+    </div>
+</div>
+<h1 style="text-align: center;">Winner:</h1>
+<button id="but" onclick="window.location.reload()">Play Again</button>
 </body>
 </html>
