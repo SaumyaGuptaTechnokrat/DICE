@@ -273,51 +273,45 @@ class Player1{
         var dice2=this.rannum2();
         document.getElementById('sumplayer2').innerHTML=dice2;    
     }
-    /*Winner(){
-        if(this.rannum()>this.rannum2()){
-            document.getElementById('winner').innerHTML="Player 1 is the winner"
-        }
-        if(this.rannum2()>this.rannum()){
-            document.getElementById('winner').innerHTML="Player 2 is the winner"
-        }
-        else if(this.rannum2()==this.rannum()){
-            document.getElementById('winner').innerHTML="The Match Is Tie"
-
-        }
-    }*/
     Winner(){
         if(parseInt(document.getElementById('sumplayer1').innerHTML)>parseInt(document.getElementById('sumplayer2').innerHTML)){
             document.getElementById('winner').innerHTML="Player1 is the Winner";
+            var blink = document.getElementById('winner');
+            setInterval(function() {
+                blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+                
+            }, 500);
+            var gameOver= document.getElementById('game');
+            gameOver.style.display="none";
+            document.getElementById('gameOver').innerHTML="GAME OVER";
         }
         if(parseInt(document.getElementById('sumplayer1').innerHTML)<parseInt(document.getElementById('sumplayer2').innerHTML)){
             document.getElementById('winner').innerHTML="Player2 is the Winner";
+            var gameOver= document.getElementById('game');
+            gameOver.style.display="none";
+            document.getElementById('gameOver').innerHTML="GAME OVER";
+            
         }
         
         else if(parseInt(document.getElementById('sumplayer1').innerHTML)==parseInt(document.getElementById('sumplayer2').innerHTML)){
             document.getElementById('winner').innerHTML="The Match is Tie Kindly Play Again";
+            var blink = document.getElementById('but');
+            setInterval(function() {
+                blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+            }, 500); 
         }
     }
     toggle1(){
         var div = document.getElementById("player1");
         div.style.pointerEvents='none';
-        /*if(div.style.pointerEvents =='all'){
-            div.style.pointerEvents = 'none';
-            return;
-        }
-        div.style.pointerEvents ='all';*/
     }
     
     toggle2(){
         var div = document.getElementById("player2");
         div.style.pointerEvents='none';
-        /*if(div.style.pointerEvents =='all'){
-            div.style.pointerEvents = 'none';
-            return;
-        }
-        div.style.pointerEvents ='all';*/
     }
     Chance1(){
-            document.getElementById('chanceof').innerHTML="Its Chance of Player2";  
+            document.getElementById('chanceof').innerHTML="Its Chance of Player2";
     }
     Chance2(){
         document.getElementById('chanceof').innerHTML="Now Click on Get Winners:";
