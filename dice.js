@@ -297,6 +297,31 @@ class Player1{
             document.getElementById('winner').innerHTML="The Match is Tie Kindly Play Again";
         }
     }
+    toggle1(){
+        var div = document.getElementById("player1");
+        div.style.pointerEvents='none';
+        /*if(div.style.pointerEvents =='all'){
+            div.style.pointerEvents = 'none';
+            return;
+        }
+        div.style.pointerEvents ='all';*/
+    }
+    
+    toggle2(){
+        var div = document.getElementById("player2");
+        div.style.pointerEvents='none';
+        /*if(div.style.pointerEvents =='all'){
+            div.style.pointerEvents = 'none';
+            return;
+        }
+        div.style.pointerEvents ='all';*/
+    }
+    Chance1(){
+            document.getElementById('chanceof').innerHTML="Its Chance of Player2";  
+    }
+    Chance2(){
+        document.getElementById('chanceof').innerHTML="Now Click on Get Winners:";
+    }
 }
 var player = new Player1();
 player.rannum();
@@ -304,3 +329,7 @@ player.sum1();
 player.rannum2();
 player.sum2();
 player.Winner();
+player.toggle1();
+player.toggle2();
+player.Chance1();
+player.Chance2();
