@@ -21,7 +21,7 @@
             <div class="one"><h1 >Number in the second Dice: <h2 id="rannum2"></h2></h1></div>
         </div>
         <!--<abbr title="Cascading Style Sheet">css</abbr>-->
-        <svg onclick="player.rannum();player.sum1()" id="dice11" width="200px", height="200px" >
+        <svg onclick="player.rannum()" id="dice11" width="200px", height="200px" >
             <rect x="10px"  y="10px" width="200px" height="200px" style="fill:blue;"/>
             <circle id="1" cx="50" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
         <circle id="2" cx="50" cy="170" r="15" stroke="black" stroke="20px" fill="white"/>
@@ -34,7 +34,7 @@
         <circle id="seven" cx="170" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
         </svg>
 
-        <svg onclick="player.rannum2();player.sum1()" id="dice12" width="200px", height="200px" >
+        <svg onclick="player.rannum();" id="dice12" width="200px", height="200px" >
             <rect x="10px"  y="10px" width="200px" height="200px" style="fill:blue;"/>
             <circle id="8" cx="50" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
             <circle id="9" cx="50" cy="170" r="15" stroke="black" stroke="20px" fill="white"/>
@@ -54,7 +54,7 @@
             }-->
         <h1 id="click">CLICK ON DICE</h1>
         <h2 id="sumplayer1">Sum Of the Numbers in the dice:</h2>
-        <button onclick="sum1()" >GET SUM</button>
+        <button onclick="player.sum1()" >GET SUM</button>
     </div>
 
 
@@ -66,7 +66,7 @@
             <div class="one"><h1 >Number in the second Dice: <h2 id="rannumplayer22"></h2></h1></div>
         </div>
         <!--<abbr title="Cascading Style Sheet">css</abbr>-->
-        <svg onclick="rannumplayer21()"  width="200px", height="200px" >
+        <svg onclick="player.rannum2();"  width="200px", height="200px" >
             <rect x="10px"  y="10px" width="200px" height="200px" style="fill:blue;"/>
             <circle id="player21" cx="50" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
         <circle id="player22" cx="50" cy="170" r="15" stroke="black" stroke="20px" fill="white"/>
@@ -80,7 +80,7 @@
         </svg>
 
         <!--SECOND DICE-->
-        <svg onclick="rannumplayer22()" id="dice22" width="200px", height="200px" >
+        <svg onclick="player.rannum2();" id="dice22" width="200px", height="200px" >
             <rect x="10px"  y="10px" width="200px" height="200px" style="fill:blue;"/>
             <circle id="player221" cx="50" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
         <circle id="player222" cx="50" cy="170" r="15" stroke="black" stroke="20px" fill="white"/>
@@ -100,9 +100,11 @@
             }-->
         <h1 id="click">CLICK ON DICE</h1>
         <h2 id="sumplayer2">Sum Of the Numbers in the dice:</h2>
+        <button onclick="player.sum2();">Get Sum</button>
     </div>
 </div>
-<h1 style="text-align: center;">Winner:</h1>
+<h1 style="text-align: center;" id="winner">Winner:</h1>
+<button onclick="player.Winner();">Get Winner</button>
 <button id="but" onclick="window.location.reload()">Play Again</button>
 </body>
 </html>
