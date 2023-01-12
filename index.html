@@ -54,7 +54,7 @@
             }-->
         <h1 id="click">CLICK ON DICE</h1>
         <h2 id="sumplayer1">Sum Of the Numbers in the dice:</h2>
-        <button onclick="player.sum1()" >GET SUM</button>
+        <button onclick="player.sum1();player.Chance1();player.toggle1()" >GET SUM</button>
     </div>
 
 
@@ -100,11 +100,12 @@
             }-->
         <h1 id="click">CLICK ON DICE</h1>
         <h2 id="sumplayer2">Sum Of the Numbers in the dice:</h2>
-        <button onclick="player.sum2();">Get Sum</button>
+        <button onclick="player.sum2();player.Chance2();player.toggle2();">Get Sum</button>
     </div>
 </div>
 <h1 style="text-align: center;" id="winner">Winner:</h1>
-<button onclick="player.Winner();">Get Winner</button>
+<h1 id="chanceof"></h1>
+<button onclick="player.Winner()">Get Winner</button>
 <button id="but" onclick="window.location.reload()">Play Again</button>
 </body>
 </html>
