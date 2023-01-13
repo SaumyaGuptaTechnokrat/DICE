@@ -32,3 +32,12 @@
             position: relative;
             left:150px;
         }
+        
+        #gameOver{
+            display: none;
+            color: red;
+            font-size: 200px;
+            font-family:cursive;
+            text-shadow: 2px 5px 4px yellow;
+            text-align: center;
+        }
