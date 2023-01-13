@@ -281,6 +281,8 @@ class Player1{
             
             setTimeout(() => {
                 document.getElementById('gameOver').style.display="block";
+                                document.getElementById('playagain').style.display="block";
+
                 }, 4000);
                 
 
@@ -306,6 +308,8 @@ class Player1{
             },500);
             setTimeout(() => {
                 document.getElementById('gameOver').style.display="block";
+                                document.getElementById('playagain').style.display="block";
+
             }, 4000);
         }
         
