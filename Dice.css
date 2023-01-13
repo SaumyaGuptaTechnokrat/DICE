@@ -41,3 +41,14 @@
             text-shadow: 2px 5px 4px yellow;
             text-align: center;
         }
+
+        #playagain{
+            
+            display: none;
+            color: red;
+            font-size: 100px;
+            
+            font-family:cursive;
+            text-shadow: 2px 5px 4px yellow;
+            text-align: center;
+        }
