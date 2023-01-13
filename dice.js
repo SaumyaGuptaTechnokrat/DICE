@@ -2,10 +2,8 @@ class Player1{
     rannum(){
         var Random11 = document.getElementById('rannum');
         Random11.innerHTML = Math.floor((Math.random())*6+1);
-        
         var Random = document.getElementById('rannum2');
         Random.innerHTML = Math.floor((Math.random())*6+1);
-        
         if(Random11.innerHTML==1){
             document.getElementById('3').style.visibility="visible";
             document.getElementById('1').style.visibility="hidden";
@@ -14,7 +12,6 @@ class Player1{
             document.getElementById('5').style.visibility="hidden";
             document.getElementById('six').style.visibility="hidden";
             document.getElementById('seven').style.visibility="hidden";
-            
         }
         if(Random11.innerHTML==5){
             document.getElementById('3').style.visibility="visible";
@@ -86,9 +83,7 @@ class Player1{
             document.getElementById('12').style.visibility="visible";
             document.getElementById('thirteen').style.visibility="hidden";
             document.getElementById('fourteen').style.visibility="hidden";
-            
         }
-        
         if(Random.innerHTML==4){
             document.getElementById('10').style.visibility="hidden";
             document.getElementById('9').style.visibility="visible";
@@ -96,10 +91,8 @@ class Player1{
             document.getElementById('12').style.visibility="visible";
             document.getElementById('8').style.visibility="visible";
             document.getElementById('thirteen').style.visibility="hidden";
-            document.getElementById('fourteen').style.visibility="hidden";
-            
+            document.getElementById('fourteen').style.visibility="hidden";  
         }
-        
         if(Random.innerHTML==3){
             document.getElementById('9').style.visibility="visible";
             document.getElementById('12').style.visibility="hidden";
@@ -108,9 +101,7 @@ class Player1{
             document.getElementById('8').style.visibility="hidden";
             document.getElementById('thirteen').style.visibility="hidden";
             document.getElementById('fourteen').style.visibility="hidden";
-            
         }
-        
         if(Random.innerHTML==2){
             document.getElementById('8').style.visibility="hidden";
             document.getElementById('10').style.visibility="hidden";
@@ -118,10 +109,8 @@ class Player1{
             document.getElementById('11').style.visibility="visible";
             document.getElementById('12').style.visibility="hidden";
             document.getElementById('thirteen').style.visibility="hidden";
-            document.getElementById('fourteen').style.visibility="hidden";
-            
+            document.getElementById('fourteen').style.visibility="hidden";  
         }
-        
         if(Random.innerHTML==6){
             document.getElementById('10').style.visibility="hidden";
             document.getElementById('11').style.visibility="visible";
@@ -129,17 +118,14 @@ class Player1{
             document.getElementById('thirteen').style.visibility="visible";
             document.getElementById('fourteen').style.visibility="visible";
             document.getElementById('8').style.visibility="visible";
-            document.getElementById('9').style.visibility="visible";
-            
+            document.getElementById('9').style.visibility="visible"; 
         }
         return (parseInt(Random11.innerHTML)+parseInt(Random.innerHTML));
     }
-    
     sum1(){
         var dice=this.rannum();
         document.getElementById('sumplayer1').innerHTML=dice;    
     }
-
     rannum2(){
         var Random21 = document.getElementById('rannumplayer21');
         Random21.innerHTML = Math.floor((Math.random())*6+1);
@@ -297,9 +283,6 @@ class Player1{
                 document.getElementById('gameOver').style.display="block";
                 }, 4000);
                 
-            setTimeout(()=>{
-                document.getElementById('winner').style.display="none";
-                  },5000);
 
         }
         if(parseInt(document.getElementById('sumplayer1').innerHTML)<parseInt(document.getElementById('sumplayer2').innerHTML)){
@@ -324,9 +307,6 @@ class Player1{
             setTimeout(() => {
                 document.getElementById('gameOver').style.display="block";
             }, 4000);
-            setTimeout(()=>{
-                document.getElementById('winner').style.display="none";
-                  },5000);
         }
         
         else if(parseInt(document.getElementById('sumplayer1').innerHTML)==parseInt(document.getElementById('sumplayer2').innerHTML)){
