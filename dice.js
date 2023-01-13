@@ -276,12 +276,16 @@ class Player1{
     Winner(){
         if(parseInt(document.getElementById('sumplayer1').innerHTML)>parseInt(document.getElementById('sumplayer2').innerHTML)){
             document.getElementById('winner').innerHTML="Player1 is the Winner";
+            document.getElementById('chanceof').style.display="none";
+
             var blink = document.getElementById('winner');
             setInterval(function() {
                 blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
 
             }, 500);
-            
+            document.body.style.backgroundImage = "url('https://th.bing.com/th/id/R.9da239e790083475fb5a2e8b6816fa5f?rik=ABIChsJvomoQDQ&riu=http%3a%2f%2fwww.rimwe.com%2f_Media%2fanimated-dice.gif&ehk=NC6%2bm4OX8konkYJdvimhWg%2b4ChU9yc76rQ%2btZ4bm2A4%3d&risl=&pid=ImgRaw&r=0')";
+            document.body.style.backgroundRepeat="no-repeat";
+            document.body.style.backgroundSize="1500px 800px";
             setInterval(function(){
                 blink.style.color="red";
                 blink.style.fontSize+="50px";
@@ -291,7 +295,6 @@ class Player1{
             
             setTimeout(() => {
                 document.getElementById('gameOver').style.display="block";
-                document.getElementById('chanceof').style.display="none";
                 }, 4000);
                 
             setTimeout(()=>{
@@ -303,18 +306,23 @@ class Player1{
             document.getElementById('winner').innerHTML="Player2 is the Winner";
             var gameOver= document.getElementById('game');
             gameOver.style.display="none";
+            document.getElementById('chanceof').style.display="none";
+
             var blink = document.getElementById('winner');
             setInterval(function() {
                 blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
                 
             }, 500);
+            
+            document.body.style.backgroundImage = "url('https://th.bing.com/th/id/R.9da239e790083475fb5a2e8b6816fa5f?rik=ABIChsJvomoQDQ&riu=http%3a%2f%2fwww.rimwe.com%2f_Media%2fanimated-dice.gif&ehk=NC6%2bm4OX8konkYJdvimhWg%2b4ChU9yc76rQ%2btZ4bm2A4%3d&risl=&pid=ImgRaw&r=0')";
+            document.body.style.backgroundRepeat="no-repeat";
+            document.body.style.backgroundSize="1500px 800px";
             setInterval(function(){
                 blink.style.color="red";
                 blink.style.fontSize+="50px";
             },500);
             setTimeout(() => {
                 document.getElementById('gameOver').style.display="block";
-                document.getElementById('chanceof').style.display="none";
             }, 4000);
             setTimeout(()=>{
                 document.getElementById('winner').style.display="none";
