@@ -92,20 +92,19 @@
         <circle id="player22six" cx="50" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
         <circle id="player22seven" cx="170" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
         </svg>     <!--2nd row 2nd column-->
-            <!--
-            .body{
-                background-image: url("https://www.animatedimages.org/data/media/710/animated-dice-image-0104.gif");
-                background-repeat: no-repeat;
-                background-size: 1500px 800px;
-            }-->
+            
         <h1 id="click">CLICK ON DICE</h1>
         <h2 id="sumplayer2">Sum Of the Numbers in the dice:</h2>
-        <button onclick="player.sum2();player.Chance2();player.toggle2();">Get Sum</button>
+        <button onclick="player.sum2();player.Chance2();player.toggle2();">GET SUM</button>
     </div>
 </div>
-<h1 style="text-align: center;" id="winner">Winner:</h1>
+<div id="controls">
+<h1 style="text-align: center;" id="winner"></h1>
+<h1 id="gameOver">GAME OVER</h1>
+
 <h1 id="chanceof"></h1>
 <button onclick="player.Winner()">Get Winner</button>
 <button id="but" onclick="window.location.reload()">Play Again</button>
+</div>
 </body>
 </html>
