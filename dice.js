@@ -279,18 +279,46 @@ class Player1{
             var blink = document.getElementById('winner');
             setInterval(function() {
                 blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
-                
+
             }, 500);
+            
+            setInterval(function(){
+                blink.style.color="red";
+                blink.style.fontSize+="50px";
+            },500);
             var gameOver= document.getElementById('game');
             gameOver.style.display="none";
-            document.getElementById('gameOver').innerHTML="GAME OVER";
+            
+            setTimeout(() => {
+                document.getElementById('gameOver').style.display="block";
+                document.getElementById('chanceof').style.display="none";
+                }, 4000);
+                
+            setTimeout(()=>{
+                document.getElementById('winner').style.display="none";
+                  },5000);
+
         }
         if(parseInt(document.getElementById('sumplayer1').innerHTML)<parseInt(document.getElementById('sumplayer2').innerHTML)){
             document.getElementById('winner').innerHTML="Player2 is the Winner";
             var gameOver= document.getElementById('game');
             gameOver.style.display="none";
-            document.getElementById('gameOver').innerHTML="GAME OVER";
-            
+            var blink = document.getElementById('winner');
+            setInterval(function() {
+                blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+                
+            }, 500);
+            setInterval(function(){
+                blink.style.color="red";
+                blink.style.fontSize+="50px";
+            },500);
+            setTimeout(() => {
+                document.getElementById('gameOver').style.display="block";
+                document.getElementById('chanceof').style.display="none";
+            }, 4000);
+            setTimeout(()=>{
+                document.getElementById('winner').style.display="none";
+                  },5000);
         }
         
         else if(parseInt(document.getElementById('sumplayer1').innerHTML)==parseInt(document.getElementById('sumplayer2').innerHTML)){
@@ -302,13 +330,12 @@ class Player1{
         }
     }
     toggle1(){
-        var div = document.getElementById("player1");
-        div.style.pointerEvents='none';
+        var div1 = document.getElementById("player1");
+        div1.style.pointerEvents='none';
     }
-    
     toggle2(){
-        var div = document.getElementById("player2");
-        div.style.pointerEvents='none';
+        var div1 = document.getElementById("player2");
+        div1.style.pointerEvents='none';
     }
     Chance1(){
             document.getElementById('chanceof').innerHTML="Its Chance of Player2";
@@ -316,6 +343,7 @@ class Player1{
     Chance2(){
         document.getElementById('chanceof').innerHTML="Now Click on Get Winners:";
     }
+    
 }
 var player = new Player1();
 player.rannum();
