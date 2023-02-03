@@ -281,7 +281,7 @@ class Player1{
             
             setTimeout(() => {
                 document.getElementById('gameOver').style.display="block";
-                                document.getElementById('playagain').style.display="block";
+                document.getElementById('playagain').style.display="block";
 
                 }, 4000);
                 
@@ -308,7 +308,7 @@ class Player1{
             },500);
             setTimeout(() => {
                 document.getElementById('gameOver').style.display="block";
-                                document.getElementById('playagain').style.display="block";
+                document.getElementById('playagain').style.display="block";
 
             }, 4000);
         }
@@ -318,6 +318,7 @@ class Player1{
             var blink = document.getElementById('but');
             setInterval(function() {
                 blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+                //blink.style.backgroundColor="red";
             }, 500); 
         }
     }
