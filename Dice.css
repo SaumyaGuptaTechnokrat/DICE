@@ -11,37 +11,40 @@
         
         .numbers{
             display: grid;
-            grid-template-columns: 320px 400px;
-        }
+            grid-template-columns: 40% 50%;
+            }
         #dice12{
             position: relative;
-            left: 150px;
+            left: 5%;
         
         }
         #game{
-            display: grid;
-            grid-template-columns: 750px 750px;
+            display: flex;
         }
         #player1{
             background-color: lightblue;
+            width:50%;
         }
         #player2{
             background-color: skyblue;
+            width:50%;
         }
         #dice22{
             position: relative;
-            left:150px;
+            left:5%;
         }
-        
+        #player1{
+            pointer-events: all;
+
+        }
         #gameOver{
             display: none;
             color: red;
-            font-size: 200px;
+            font-size: 10vh;
             font-family:cursive;
             text-shadow: 2px 5px 4px yellow;
             text-align: center;
         }
-
         #playagain{
             
             display: none;
@@ -51,4 +54,16 @@
             font-family:cursive;
             text-shadow: 2px 5px 4px yellow;
             text-align: center;
+        }
+        /*#another{
+            text-decoration: none;
+        }*/
+        /*@media screen and (min-width:180px) and (max-width:480px) {
+            #scndsncd,#frstscnd{
+                position: relative;
+                top:200%;
+            }
+        }*/
+        #click,#sumplayer1,#sumplayer2{
+            font-size: large;
         }
