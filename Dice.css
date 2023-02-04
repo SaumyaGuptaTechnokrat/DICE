@@ -11,11 +11,11 @@
         
         .numbers{
             display: grid;
-            grid-template-columns: 40% 50%;
+            grid-template-columns: 45% 50%;
             }
         #dice12{
             position: relative;
-            left: 5%;
+            left: 2%;
         
         }
         #game{
@@ -31,7 +31,7 @@
         }
         #dice22{
             position: relative;
-            left:5%;
+            left:2%;
         }
         #player1{
             pointer-events: all;
