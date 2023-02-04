@@ -16,7 +16,7 @@
         #dice12{
             position: relative;
             left: 4%;
-        
+            border:1px black solid;
         }
         #game{
             display: flex;
