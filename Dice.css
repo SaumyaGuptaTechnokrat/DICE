@@ -13,7 +13,7 @@
             display: grid;
             grid-template-columns: 45% 55%;
             }
-        #dice12{
+        #rect12{
             position: relative;
             left: 1%;
             border:1px black solid;
@@ -29,7 +29,7 @@
             background-color: skyblue;
             width:50%;
         }
-        #dice22{
+        #rect22{
             position: relative;
             left:5%;
         }
