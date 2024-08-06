@@ -4,383 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
-    <script>
-    class Player1{
-    rannum(){
-        var Random11 = document.getElementById('rannum');
-        Random11.innerHTML = Math.floor((Math.random())*6+1);
-        var Random = document.getElementById('rannum2');
-        Random.innerHTML = Math.floor((Math.random())*6+1);
-        if(Random11.innerHTML==1){
-            document.getElementById('3').style.visibility="visible";
-            document.getElementById('1').style.visibility="hidden";
-            document.getElementById('2').style.visibility="hidden";
-            document.getElementById('4').style.visibility="hidden";
-            document.getElementById('5').style.visibility="hidden";
-            document.getElementById('six').style.visibility="hidden";
-            document.getElementById('seven').style.visibility="hidden";
-        }
-        if(Random11.innerHTML==5){
-            document.getElementById('3').style.visibility="visible";
-            document.getElementById('1').style.visibility="visible";
-            document.getElementById('2').style.visibility="visible";
-            document.getElementById('4').style.visibility="visible";
-            document.getElementById('5').style.visibility="visible";
-            document.getElementById('six').style.visibility="hidden";
-            document.getElementById('seven').style.visibility="hidden";
-            
-        }
-        if(Random11.innerHTML==4){
-            document.getElementById('3').style.visibility="hidden";
-            document.getElementById('1').style.visibility="visible";
-            document.getElementById('2').style.visibility="visible";
-            document.getElementById('4').style.visibility="visible";
-            document.getElementById('5').style.visibility="visible";
-            document.getElementById('six').style.visibility="hidden";
-            document.getElementById('seven').style.visibility="hidden";
-            
-        }
-        
-        if(Random11.innerHTML==3){
-            document.getElementById('3').style.visibility="visible";
-            document.getElementById('1').style.visibility="hidden";
-            document.getElementById('2').style.visibility="visible";
-            document.getElementById('4').style.visibility="visible";
-            document.getElementById('5').style.visibility="hidden";
-            document.getElementById('six').style.visibility="hidden";
-            document.getElementById('seven').style.visibility="hidden";
-            
-        }
-        
-        if(Random11.innerHTML==2){
-            document.getElementById('3').style.visibility="hidden";
-            document.getElementById('1').style.visibility="hidden";
-            document.getElementById('2').style.visibility="visible";
-            document.getElementById('4').style.visibility="visible";
-            document.getElementById('5').style.visibility="hidden";
-            document.getElementById('six').style.visibility="hidden";
-            document.getElementById('seven').style.visibility="hidden";
-        }
-        
-        if(Random11.innerHTML==6){
-            document.getElementById('3').style.visibility="hidden";
-            document.getElementById('1').style.visibility="visible";
-            document.getElementById('2').style.visibility="visible";
-            document.getElementById('4').style.visibility="visible";
-            document.getElementById('5').style.visibility="visible";
-            document.getElementById('six').style.visibility="visible";
-            document.getElementById('seven').style.visibility="visible";
-        }
-     
-        if(Random.innerHTML==1){
-            document.getElementById('10').style.visibility="visible";
-            document.getElementById('11').style.visibility="hidden";
-            document.getElementById('12').style.visibility="hidden";
-            document.getElementById('8').style.visibility="hidden";
-            document.getElementById('9').style.visibility="hidden";
-            document.getElementById('thirteen').style.visibility="hidden";
-            document.getElementById('fourteen').style.visibility="hidden";
-            
-        }
-        if(Random.innerHTML==5){
-            document.getElementById('8').style.visibility="visible";
-            document.getElementById('9').style.visibility="visible";
-            document.getElementById('10').style.visibility="visible";
-            document.getElementById('11').style.visibility="visible";
-            document.getElementById('12').style.visibility="visible";
-            document.getElementById('thirteen').style.visibility="hidden";
-            document.getElementById('fourteen').style.visibility="hidden";
-        }
-        if(Random.innerHTML==4){
-            document.getElementById('10').style.visibility="hidden";
-            document.getElementById('9').style.visibility="visible";
-            document.getElementById('11').style.visibility="visible";
-            document.getElementById('12').style.visibility="visible";
-            document.getElementById('8').style.visibility="visible";
-            document.getElementById('thirteen').style.visibility="hidden";
-            document.getElementById('fourteen').style.visibility="hidden";  
-        }
-        if(Random.innerHTML==3){
-            document.getElementById('9').style.visibility="visible";
-            document.getElementById('12').style.visibility="hidden";
-            document.getElementById('10').style.visibility="visible";
-            document.getElementById('11').style.visibility="visible";
-            document.getElementById('8').style.visibility="hidden";
-            document.getElementById('thirteen').style.visibility="hidden";
-            document.getElementById('fourteen').style.visibility="hidden";
-        }
-        if(Random.innerHTML==2){
-            document.getElementById('8').style.visibility="hidden";
-            document.getElementById('10').style.visibility="hidden";
-            document.getElementById('9').style.visibility="visible";
-            document.getElementById('11').style.visibility="visible";
-            document.getElementById('12').style.visibility="hidden";
-            document.getElementById('thirteen').style.visibility="hidden";
-            document.getElementById('fourteen').style.visibility="hidden";  
-        }
-        if(Random.innerHTML==6){
-            document.getElementById('10').style.visibility="hidden";
-            document.getElementById('11').style.visibility="visible";
-            document.getElementById('12').style.visibility="visible";
-            document.getElementById('thirteen').style.visibility="visible";
-            document.getElementById('fourteen').style.visibility="visible";
-            document.getElementById('8').style.visibility="visible";
-            document.getElementById('9').style.visibility="visible"; 
-        }
-        return (parseInt(Random11.innerHTML)+parseInt(Random.innerHTML));
-    }
-    sum1(){
-        var dice=this.rannum();
-        document.getElementById('sumplayer1').innerHTML=dice;    
-    }
-
-    Verify(){
-
-        if(parseInt(document.getElementById('sumplayer1').innerHTML)==document.getElementById('num').value){
-            document.getElementById('Won').innerHTML=' Congratulations!! You Won the Jackpot' ;
-            setTimeout(()=>{
-                document.getElementById('num').style.pointerEvents='none';
-            });
-        }    
-        else{
-            document.getElementById('Won').innerHTML='You Lost the Jackpot ' + '<br>' +'because sum of dice' + '<br>' + 'is not equal to your input' ;
-
-        }
-        document.getElementById('art').style.height='670px';
-        document.getElementById('art2').style.height='670px';
-    }
-    /*AfterClickingInput(){
-            document.getElementById('getSumbtn').style.pointerEvents='all';
-    }*/
-    
-}
-var player = new Player1();
-player.rannum();
-player.sum1();
-player.AfterClickingInput();
-var a;
-function checkNumber(event) {
-  const input = event.target;
-  const value = input.value;
- 
-  if (isNaN(value) || value < 1 || value > 12) {
-    // If the input is not a number between 2 and 12, clear the input
-    input.value = '';
-  }
-  if(!isNaN(value)){
-    document.getElementById('getSumbtn').style.pointerEvents='all';
-  }
-}
-    </script>
-    <style>
-        *{
-            padding: 5px;
-            
-        }
-        body{
-            /*background-image: url("https://media.giphy.com/media/3oGRFlpAW4sIHA02NW/giphy.gif");*/
-        }
-        #six,#seven,#thirteen,#fourteen{
-            visibility: hidden;
-        }
-        #rounded{
-            border-radius: 30%;
-        }
-        #rannum,#click{
-            color:black;
-        }
-        #getSumbtn{
-            pointer-events: none;
-            border-radius: 30px;
-            height: 40px;
-            color: plum;
-            background-image: url("https://media.giphy.com/media/3oGRFlpAW4sIHA02NW/giphy.gif");
-        }
-        #getSumbtn:hover{
-            position: relative;
-            left:100px;
-            right:100px;
-            cursor: pointer;
-
-        }
-        #getresults{
-            border-radius: 30px;
-            height: 40px;
-            color: plum;
-            background-image: url("https://media.giphy.com/media/3oGRFlpAW4sIHA02NW/giphy.gif");
-        }
-        #getresults:hover{
-            position: relative;
-            right:100px;
-            cursor: pointer;
-        }
-        #click{
-            font-family: "Mynerve";
-            font-style: italic;
-            color: green;
-        }
-        h2{
-            font-family:"Comic sans";
-            font-style: italic;
-            color: green;
-            font-size: 200%
-        }
-        .numbers{
-            display: grid;
-            grid-template-columns: 320px 400px;
-            text-align: center;
-            float: inline-end;
-            position: relative;
-            left:400px;
-        }
-        #dice11{
-            border-radius: 32%;
-        }
-        #dice12{
-
-            border-radius: 32%;
-        }
-        #player1{
-            border: 2px gray solid;
-            border-radius: 20px;
-            background-color: plum;
-            /*background-image: url('https://media.giphy.com/media/QcLmgK0n65PR6/giphy.gif');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;*/
-        }
-        #dices{
-            display: flex;
-            justify-content: center;
-        }
-        #content{
-            display: grid;
-            justify-content: center;
-        }
-        #num{
-            border: none;
-            background: transparent;
-            line-height: 1.5px;
-            border-bottom: 3px solid green;
-            color: plum;
-            font-size: larger;
-            transition: width 0.5s ease-in-out;
-            height: 30px;
-            position: relative;
-            top:15px;
-            transition: border-color 0.15s ease-in-out;
-            height: calc(1.5em + 0.75rem + 2px);
-
-
-        }
-        #num:hover{
-            width:20%;
-            border-color: purple;
-
-        }
-        #getresults{
-
-        }
-        #Won{
-            color:brown;
-        }
-        #rannum{
-            font-family:"Comic sans";
-            font-style: italic;
-            color: green;
-        }
-        #art{
-
-            position: absolute;
-            left:1.3%;
-            width:32%;
-        }
-        #art2{
-            position: absolute;
-            right:1.3%;
-        }
-        .art{
-            
-            width:32.5%;
-            height: 538px;
-            border-radius: 20px;
-            background-image: url('https://media.giphy.com/media/QcLmgK0n65PR6/giphy.gif');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-        #input_div{
-            display: flex;
-            position: relative;
-            left: 30%;
-        }
-@keyframes app-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-    </style>
+    <title>Dice Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="anotherGame.css" rel="stylesheet">
+  
 </head>
 <body>
-    <div id="player1">
-
-        <!--<abbr title="Cascading Style Sheet">css</abbr>-->
-        <div id="input_div"><h2>Type Number Here:</h2><input id="num" onclick="player.AfterClickingInput()"  oninput="checkNumber(event)" type="number" >
+    <div id="game-container">
+        <h1>Dice Game</h1>
+        <div id="input_div">
+            <h2>Type a number between 1 and 12:</h2>
+            <input id="num" type="number" min="1" max="12" placeholder="1-12">
+            <p id="input-error" style="color: red; display: none;">Please enter a number between 1 and 12.</p>
         </div>
-        
-        <div class="numbers">
-            <div class="one"><h2 >Number in the Dice: <h2 id="rannum"></h2></h2></div>
-            <div class="one"><h2 >Number in the second Dice: <h2 id="rannum2"></h2></h2></div>
+        <div class="dice-results">
+            <div class="result">
+                <h2>First Dice: <span id="rannum">-</span></h2>
+            </div>
+            <div class="result">
+                <h2>Second Dice: <span id="rannum2">-</span></h2>
+            </div>
         </div>
-        <div id="dices">
-            <div id="art" class="art"></div>
+        <div class="dice-container">
+            <div class="dice" onclick="player.rannum();">
+                <div id="art" class="art"></div>
 
-        <svg onclick="player.rannum()" id="dice11" width="200px", height="200px" >
-            <rect x="10px"  y="10px" width="200px" height="200px" style="fill:green;"/>
-            <circle id="1" cx="50" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
-        <circle id="2" cx="50" cy="170" r="15" stroke="black" stroke="20px" fill="white"/>
+                <svg class="dice-svg" viewBox="0 0 200 200">
+                    <!-- <rect x="10" y="10" width="180" height="180"/> -->
+                    <circle id="1" cx="50" cy="50" r="15"/>
+                    <circle id="2" cx="50" cy="170" r="15"/>
+                    <circle id="3" cx="110" cy="110" r="15"/>
+                    <circle id="4" cx="170" cy="50" r="15"/>
+                    <circle id="5" cx="170" cy="170" r="15"/>
+                    <circle id="six" cx="50" cy="110" r="15"/>
+                    <circle id="seven" cx="170" cy="110" r="15"/>
+                </svg>
+                <div id="art" class="art"></div>
 
-        <circle id="3" cx="110" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>
+            </div>
+            <div class="dice" onclick="player.rannum();">
+                <div id="art" class="art"></div>
 
-        <circle id="4" cx="170" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
-        <circle id="5" cx="170" cy="170" r="15" stroke="black" stroke="10px" fill="white"/>   
-        <circle id="six" cx="50" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
-        <circle id="seven" cx="170" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>     
-        </svg>
+                <svg class="dice-svg" viewBox="0 0 200 200">
+                    <!-- <rect x="10" y="10" width="180" height="180"/> -->
+                    <circle id="8" cx="50" cy="50" r="15"/>
+                    <circle id="9" cx="50" cy="170" r="15"/>
+                    <circle id="10" cx="110" cy="110" r="15"/>
+                    <circle id="11" cx="170" cy="50" r="15"/>
+                    <circle id="12" cx="170" cy="170" r="15"/>
+                    <circle id="thirteen" cx="50" cy="110" r="15"/>
+                    <circle id="fourteen" cx="170" cy="110" r="15"/>
+                </svg>
+                <div id="art2" class="art"></div>
 
-        <svg onclick="player.rannum();" id="dice12" width="200px", height="200px" >
-            <rect x="10px"  y="10px" width="200px" height="200px" style="fill:green;"/>
-            <circle id="8" cx="50" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
-            <circle id="9" cx="50" cy="170" r="15" stroke="black" stroke="20px" fill="white"/>
-
-            <circle id="10" cx="110" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>
-
-            <circle id="11" cx="170" cy="50" r="15" stroke="black" stroke="20px" fill="white"/>
-            <circle id="12" cx="170" cy="170" r="15" stroke="black" stroke="10px" fill="white"/>   
-            <circle id="thirteen" cx="50" cy="110" r="15" stroke="black" stroke="20px" fill="white"/> <!--1st column 2nd row -->
-            <circle id="fourteen" cx="170" cy="110" r="15" stroke="black" stroke="20px" fill="white"/>
-        </svg>    
-        <div id="art2" class="art"></div>
-
-    </div> <!--2nd row 2nd column-->
-            <!--
-            .body{
-                background-repeat: no-repeat;
-                background-size: 1500px 800px;
-            }-->
-        <div id="content">
-            <h1 id="click">CLICK ON GET SUM:</h1>
-            <h2 id="sumplayer1">Sum Of the Numbers in the dice:</h2>
+            </div>
+        </div>
+        <div id="game-actions">
+            <h2>Sum of Numbers on Dice: <span id="sumplayer1">-</span></h2>
             <h2 id="Won"></h2>
-            <button onclick="player.sum1()" id="getSumbtn" >GET SUM</button>
+            <button onclick="player.sum1()" id="getSumbtn">Get Sum</button>
             <br>
-            <button onclick="player.Verify()" id="getresults">GET RESULTS</button>
-
+            <button onclick="player.Verify()">Get Results</button>
+            <br>
+            <button onclick="player.playAgain()" id="playAgainBtn" style="display: none;">Play Again</button>
         </div>
     </div>
-
+    <script src="anotherGame.js"></script>
+   
 </body>
 </html>
