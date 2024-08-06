@@ -1,0 +1,130 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e0f2f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #004d40;
+}
+
+rect{
+    background-color: transparent;
+}
+
+
+h1 {
+    color: #00796b;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+
+label {
+    font-size: 1.2rem;
+    color: #00796b;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #004d40;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 150px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #00796b;
+}
+
+.dice-results {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.result h2 {
+    font-size: 1.2rem;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
+    background-color: #00796b;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dice:hover {
+    transform: scale(1.1);
+    background-color: #004d40;
+}
+
+.dice-svg {
+    width: 80%;
+    height: 80%;
+}
+
+#game-actions {
+    margin-top: 20px;
+}
+
+#game-actions h2 {
+    font-size: 1.2rem;
+}
+#game-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+#input_div {
+    margin-bottom: 20px;
+}
+
+
+@keyframes app-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+    
